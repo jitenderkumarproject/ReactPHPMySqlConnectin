@@ -12,6 +12,12 @@ function App() {
       setEmpData(resp); // setting the state
        console.log(result);
 
+function InsertData(){
+  Common.callApi("/api/server.php", ["insert", "Jitendra", "IT Engineer", "Rajendra Place"], (result) => {
+
+  });
+}
+
     });
   }, []);
   return (
@@ -40,28 +46,30 @@ function App() {
     </table>
 
       <table align="center" border={1}>
-        <th>
-          <tr>
+        
+            <tr>
+            
             <td>
              ID
             </td>
+           
+            
             <td>
             Employee Name
             </td>
+           
+           
             <td>
             Employee Designation
             </td>
+            
+            
             <td>
             Employee Address
             </td>
-            <td>
-            
-            </td>
-            <td>
-
-            </td>
-          </tr>
-        </th>
+           
+            </tr>
+        
         {
            empData.map((item,i) =>
            <tr>
